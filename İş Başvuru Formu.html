@@ -6,8 +6,11 @@
     <title>Document</title>
 
     <style>
+        body{
+            background: linear-gradient(135deg, #71b7e6, 9b59b6);
+        }
         input[type=text]{
-            width: 100%;
+            width: 10%;
             padding: 12px 15px;
             margin: 8px 0;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -15,38 +18,73 @@
         }
 
         .custom-select{
-            width: 100%;
+            width: 10%;
             padding: 12px 15px;
             margin: 8px 0;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             border-radius: 6px;
+            border: 2px solid black;
         }
 
     </style>
 </head>
 <body>
     
-    <h5 style="color: red;">Genel Bilgiler</h5>
+    <h3 style="color: red;">Genel Bilgiler</h3>
     <label for="fname">Adiniz</label>
     <input type="text">
+    <label for="fname" style="text-align: right;" >İş Pozisyonu</label>
+    <input type="text" style="text-align: right;"> <br>
     <label for="fname">Soyadiniz</label>
     <input type="text">
-    
+    <label for="fname">Ehliyetiniz</label>
+    <select class="custom-select" id="Ehliyetiniz">
+        <option value="Var">Var</option>
+        <option value="Yok">Yok</option>
+    </select> <br>
+
     <label for="fname">Cinsiyetiniz</label>
     <select class="custom-select" name="Cinsiyetiniz" id="">
         <option value="Erkek">Erkek</option>
         <option value="Kadin">Kadin</option>
-        <option value=""></option>
     </select>
+    
+    <label for="fname">Öğrenim Durumu</label>
+    <select class="custom-select" id="Öğrenim Durumu">
+<option value="İlkokul">İlkokul</option>
+<option value="Lise">Lise</option>
+<option value="Üniversite">Üniversite</option>
+    </select> <br>
+
+    <label for="fname">Doğum Tarihiniz</label>
+    <input type="text">
+
+    <label for="fname">Medeni Haliniz</label>
+<select class="custom-select" id="">Medeni Haliniz
+<option value="Evli">Evli</option>
+<option value="Bekar">Bekar</option>
+</select> <br>
+
     <label for="fname">Doğum Yeriniz</label>
     <input type="text">
 
-    <h5 style="color: red;">İletişim Bilgieriniz</h5>
+    <label for="fname">Yabanci Dilleriniz</label>
+    <input type="text"> <br>
+
+    <label for="fname">Tecrübeleriniz</label>
+    <input type="text">
+
+    <label for="fname">Eklemek İstedikleriniz</label>
+    <input type="text">
+
+    <h3 style="color: red;">İletişim Bilgieriniz</h3>
     <label for="fname">Ev Telefonu</label>
-    <input type="text">
+    <input type="text"> <br>
     <label for="fname">İş Telefonu</label>
-    <input type="text">
+    <input type="text"> <br>
     <label for="fname">Cep Telefonu</label>
-    <input type="text">
+    <input type="text"> <br>
+    <label for="fname">Adresiniz</label>
+    <textarea name="" id="" cols="50" rows="10"></textarea>
 </body>
 </html>
