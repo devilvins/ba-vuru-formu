@@ -46,7 +46,7 @@ function saveApplication(event) {
         alert("Yabancı dilleriniz bölümü boş bırakılamaz")
         y = y + 1;
     }
-    else (y == 0) {
+    else if(y == 0) {
         alert("başarıyla kaydoldunuz.")
     }
 
