@@ -7,9 +7,11 @@
     <title>Document</title>
 
     <style>
-        body {
-            background: linear-gradient(135deg, #71b7e6, 9b59b6);
-        }
+            body {
+        background-image: url('arka plan.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+      }
 
         input[type=text] {
             width: 100%;
@@ -27,48 +29,96 @@
             border-radius: 6px;
             border: 2px solid black;
         }
+        label.logo{
+            color: white;
+            font-size: 35px ;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+        nav{
+            background-color: #0082e6;
+            height: 100px;
+            width: 100%;
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px;
+        }
+        nav ul li a{
+            color: white;
+            padding: 7px 13px;
+            border-radius: 3px;
+            font-size: 17px;
+            text-transform: uppercase;
+
+        }
+        a.active,a:hover{
+            background: #1b9bff;
+            transition: .5s;
+        }
     </style>
 </head>
 
 <body>
-
+    <form id="myForm">
+    <div class>
+        <nav>
+            <label style="color: white; padding-left: 20px;" class="logo">Yakup</label>
+            <ul style="color: white;">
+                <li><a href="#">Ev</a></li>
+                <li><a class="active">Başvuru</a></li>
+                <li><a href="#">Hakkimizda</a></li>
+                <li><a href="#">Servisler</a></li>
+                <li><a href="#">İletişim</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
     <h3 style="color: red;">Genel Bilgiler</h3>
-    <div style="display: flex">
+    <div style="color: white; display: flex">
         <div style="width: 200px; padding-right: 200px;">
-            <label for="fname">Babaniz</label>
-            <input type="text">
+           <div id="form">
+             <label>Adiniz</label>
+            <input id="name" class="name" type="text">
+            </div>
             <label for="fname">Soyadiniz</label>
-            <input type="text">
+            <input id="surname" class="surname" type="text">
             <label for="fname">Cinsiyetiniz</label>
-            <select class="custom-select" name="Cinsiyetiniz" id="">
+            <select class="custom-select" id="cinsiyet" name="Cinsiyetiniz" id="">
                 <option value="Erkek">Erkek</option>
                 <option value="Kadin">Kadin</option>
             </select>
-            <label for="fname">Doğum Tarihiniz</label>
-            <input type="text">
+            <label  for="fname">Doğum Tarihiniz</label>
+            <input  id="age" class="age" type="text">
             <label for="fname">Doğum Yeriniz</label>
-            <input type="text">
+            <input id="birthdate" class="birthdate" type="text">
             <label for="fname">Tecrübeleriniz</label>
-            <input type="text">
+            <input id="experiance" class="experiance" type="text">
             <h3 style="color: red;">İletişim Bilgieriniz</h3>
             <label for="fname">Ev Telefonu</label>
-            <input type="text"> <br>
+            <input id="homephone" class="homephone" type="text"> <br>
             <label for="fname">İş Telefonu</label>
-            <input type="text"> <br>
+            <input id="workphone" class="workphone" type="text"> <br>
             <label for="fname">Cep Telefonu</label>
-            <input type="text"> <br>
+            <input id="phone" class="phone" type="text"> <br>
             <label for="fname">Adresiniz</label>
-            <textarea name="" id="" cols="50" rows="10"></textarea>
+            <textarea name="" id="Adress" class="Adress" cols="50" rows="10"></textarea>
         </div>
 
 
         <div style="width: 200px;">
 
-            <label for="fname" style="text-align: right;">İş Pozisyonu</label>
-            <input type="text" style="text-align: right;"> <br>
+            <label for="fname">İş Pozisyonu</label>
+            <input id="workposition" class="workposition" type="text"> <br>
 
             <label for="fname">Ehliyetiniz</label>
-            <select class="custom-select" id="Ehliyetiniz">
+            <select class="custom-select" id="License">
                 <option value="Var">Var</option>
                 <option value="Yok">Yok</option>
             </select> <br>
@@ -76,7 +126,7 @@
 
 
             <label for="fname">Öğrenim Durumu</label>
-            <select class="custom-select" id="Öğrenim Durumu">
+            <select class="custom-select" id="school">
                 <option value="İlkokul">İlkokul</option>
                 <option value="Lise">Lise</option>
                 <option value="Üniversite">Üniversite</option>
@@ -85,7 +135,7 @@
 
 
             <label for="fname">Medeni Haliniz</label>
-            <select class="custom-select" id="">Medeni Haliniz
+            <select class="custom-select" id="Medeni">Medeni Haliniz
                 <option value="Evli">Evli</option>
                 <option value="Bekar">Bekar</option>
             </select> <br>
@@ -93,16 +143,24 @@
 
 
             <label for="fname">Yabanci Dilleriniz</label>
-            <input type="text"> <br>
+            <input id="Languages" class="Languages" type="text"> <br>
 
 
 
-            <label for="fname">Eklemek İstedikleriniz</label>
-            <input type="text">
+            <label for="fname">Eklemek İstedikleriniz(Opsiyonel)</label>
+            <input id="add" class="add" type="text">
 
+            <button onclick="saveApplication()">kaydet</button>
         </div>
 
-    </div>
+    
+    
+    
+    
+
+    </div> 
+</form>
+<script src="index.js"></script>
 </body>
 
 </html>
